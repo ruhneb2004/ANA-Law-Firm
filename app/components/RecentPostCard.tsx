@@ -19,7 +19,7 @@ export const RecentPostCard = ({ post }: { post: BlogDetail }) => {
         <p className="text-teal-600 text-sm font-semibold mb-1">
           {post.category}
         </p>
-        <h3 className="text-lg font-bold text-gray-800 group-hover:text-red-900 transition-colors">
+        <h3 className="text-lg font-bold text-gray-800 group-hover:text-[#8D1A1B] transition-colors">
           {post.title}
         </h3>
       </div>

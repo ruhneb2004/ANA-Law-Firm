@@ -36,7 +36,7 @@ export const FilteredBlogList = ({
               onClick={() => handleFilterClick(category)}
               className={`cursor-pointer transition-colors duration-200 ${
                 activeFilter === category
-                  ? "text-red-900 font-semibold"
+                  ? "text-[#8D1A1B] font-semibold"
                   : "text-gray-500"
               }`}
             >
@@ -51,7 +51,7 @@ export const FilteredBlogList = ({
               onClick={() => handleFilterClick(tag)}
               className={`border px-3 py-1 cursor-pointer transition-colors duration-200 ${
                 activeFilter === tag
-                  ? "bg-red-900 text-white border-red-900"
+                  ? "bg-[#8D1A1B] text-white border-[#8D1A1B]"
                   : "border-gray-300"
               }`}
             >

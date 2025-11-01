@@ -70,7 +70,7 @@ export const Header = () => {
           </Link>
         </div>
 
-        <nav className="hidden md:flex justify-between gap-16 lg:gap-24 px-10 text-[16px] items-center font-light text-red-900">
+        <nav className="hidden md:flex justify-between gap-16 lg:gap-24 px-10 text-[#8D1A1B] text-[16px] items-center font-light text-">
           <Link href={"/"} className="hover:underline">
             Home
           </Link>
@@ -86,41 +86,38 @@ export const Header = () => {
         </nav>
 
         <div className="md:hidden">
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-red-900"
-          >
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-">
             {isMenuOpen ? <CloseIcon /> : <HamburgerIcon />}
           </button>
         </div>
       </div>
 
       {isMenuOpen && (
-        <nav className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg flex flex-col items-center p-4">
+        <nav className="md:hidden absolute top-full left-0 w-full bg-white text-[#8D1A1B] shadow-lg flex flex-col items-center p-4">
           <Link
             href={"/"}
-            className="py-3 text-red-900 hover:underline w-full text-center"
+            className="py-3 text- hover:underline w-full text-center"
             onClick={() => setIsMenuOpen(false)}
           >
             Home
           </Link>
           <Link
             href={"/blog"}
-            className="py-3 text-red-900 hover:underline w-full text-center"
+            className="py-3 text- hover:underline w-full text-center"
             onClick={() => setIsMenuOpen(false)}
           >
             Blog
           </Link>
           <Link
             href={"/legal"}
-            className="py-3 text-red-900 hover:underline w-full text-center"
+            className="py-3 text- hover:underline w-full text-center"
             onClick={() => setIsMenuOpen(false)}
           >
             First Steps, Legally
           </Link>
           <Link
             href={"/practiceArea"}
-            className="py-3 text-red-900 hover:underline w-full text-center"
+            className="py-3 text- hover:underline w-full text-center"
             onClick={() => setIsMenuOpen(false)}
           >
             Practice Area

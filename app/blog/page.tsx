@@ -8,7 +8,7 @@ const BlogPage = () => {
     <div>
       {/* THE STICKY HEADER SECTION (Stays here, rendered on the server) */}
       <div className="sticky top-0 z-10 flex flex-col justify-center items-center gap-8 pt-16 md:pt-24 bg-white">
-        <div className="text-4xl md:text-6xl font-light text-red-900 tracking-wide">
+        <div className="text-4xl md:text-6xl font-light text-[#8D1A1B] tracking-wide">
           THE ANA GAZETTE
         </div>
         <div className="w-[80%]">

@@ -7,7 +7,6 @@ import Link from "next/link";
 // --- TYPE DEFINITIONS ---
 import { BlogDetail } from "@/app/blogContent";
 
-
 type BlogCardProps = {
   blogDetail: BlogDetail;
 };
