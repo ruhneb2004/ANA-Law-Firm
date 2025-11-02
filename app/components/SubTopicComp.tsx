@@ -38,10 +38,6 @@ const SubTopicComp = ({
                          opacity-100 sm:opacity-0 group-hover:opacity-100 transition-opacity 
                          duration-500 ease-in-out"
             >
-              <h4 className="text-2xl md:text-3xl font-light text-white mb-6 tracking-wide">
-                {subTopic}
-              </h4>
-
               <ul className="space-y-3">
                 {items.map((item, index) => (
                   <li
