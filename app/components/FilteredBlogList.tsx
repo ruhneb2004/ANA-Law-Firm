@@ -4,13 +4,12 @@ import { useState } from "react";
 import { BlogCard } from "./BlogCard";
 import { BlogDetail } from "../blogContent";
 
-export const FilteredBlogList = ({
-  posts,
-  tags,
-}: {
+interface FilteredBlogListProps {
   posts: BlogDetail[];
   tags: string[];
-}) => {
+}
+
+export const FilteredBlogList = ({ posts, tags }: FilteredBlogListProps) => {
   const [activeFilter, setActiveFilter] = useState<string>("All Posts");
 
   const handleFilterClick = (filter: string) => {
@@ -27,36 +26,38 @@ export const FilteredBlogList = ({
 
   return (
     <div>
-      {/* FILTER CONTROLS (No changes here) */}
+      {/* FILTER CONTROLS */}
       <div className="flex flex-col md:flex-row justify-between items-center mx-4 md:mx-12 lg:mx-20">
         <div className="flex gap-4 text-md px-4 font-light mb-8 md:mb-0">
           {["All Posts", "Articles", "Newsletter"].map((category) => (
-            <div
+            <button
               key={category}
               onClick={() => handleFilterClick(category)}
               className={`cursor-pointer transition-colors duration-200 ${
                 activeFilter === category
                   ? "text-[#8D1A1B] font-semibold"
-                  : "text-gray-500"
+                  : "text-gray-500 hover:text-gray-700"
               }`}
+              type="button"
             >
               {category}
-            </div>
+            </button>
           ))}
         </div>
         <div className="flex w-full md:w-1/2 flex-wrap justify-center md:justify-end gap-3 px-4 text-md font-light">
           {tags.map((tag) => (
-            <div
+            <button
               key={tag}
               onClick={() => handleFilterClick(tag)}
               className={`border px-3 py-1 cursor-pointer transition-colors duration-200 ${
                 activeFilter === tag
                   ? "bg-[#8D1A1B] text-white border-[#8D1A1B]"
-                  : "border-gray-300"
+                  : "border-gray-300 hover:border-gray-400"
               }`}
+              type="button"
             >
               {tag}
-            </div>
+            </button>
           ))}
         </div>
       </div>
@@ -66,11 +67,10 @@ export const FilteredBlogList = ({
         {filteredPosts.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
             {filteredPosts.map((blog) => (
-              <BlogCard key={blog.title} blogDetail={blog} />
+              <BlogCard key={blog.slug || blog.title} blogDetail={blog} />
             ))}
           </div>
         ) : (
-          // Option 1: Stylized Text with an Icon
           <div className="flex flex-col items-center justify-center min-h-[20rem] text-gray-500 text-center px-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -79,6 +79,7 @@ export const FilteredBlogList = ({
               viewBox="0 0 24 24"
               stroke="currentColor"
               strokeWidth="1.5"
+              aria-hidden="true"
             >
               <path
                 strokeLinecap="round"
@@ -94,6 +95,7 @@ export const FilteredBlogList = ({
               <button
                 onClick={() => handleFilterClick("All Posts")}
                 className="mt-6 px-6 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 transition-colors"
+                type="button"
               >
                 Show All Posts
               </button>

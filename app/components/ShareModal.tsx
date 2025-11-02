@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 
-// --- HELPER SVGS FOR THE MODAL ---
-
 const FacebookIcon = () => (
   <svg
     width="20"
@@ -79,8 +77,6 @@ const CloseIcon = () => (
   </svg>
 );
 
-// (The full SVG code for these is in the final component below)
-
 type ShareModalProps = {
   isOpen: boolean;
   onClose: () => void;
@@ -96,28 +92,24 @@ export const ShareModal = ({
 }: ShareModalProps) => {
   const [copied, setCopied] = useState(false);
 
-  // Don't render anything if the modal is not open
   if (!isOpen) return null;
 
   const handleCopyLink = () => {
     navigator.clipboard.writeText(blogUrl).then(() => {
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000); // Reset after 2 seconds
+      setTimeout(() => setCopied(false), 2000);
     });
   };
 
-  // Prevent modal from closing when clicking inside it
   const handleModalContentClick = (e: React.MouseEvent) => {
     e.stopPropagation();
   };
 
   return (
-    // Modal Overlay
     <div
       className="fixed inset-0 bg-black/60 flex justify-center items-center z-50"
-      onClick={onClose} // Close modal when clicking the overlay
+      onClick={onClose}
     >
-      {/* Modal Content */}
       <div
         className="bg-white rounded-lg p-6 shadow-xl relative w-full max-w-sm text-center"
         onClick={handleModalContentClick}
@@ -132,7 +124,6 @@ export const ShareModal = ({
         <h3 className="text-lg font-semibold text-gray-800 mb-6">Share Post</h3>
 
         <div className="flex justify-center items-center gap-4">
-          {/* Social Links - open in a new tab */}
           <a
             href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
               blogUrl

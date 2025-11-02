@@ -15,16 +15,33 @@ interface ConstellationNetworkProps {
   onNodeClick: (nodeId: string, nodeType: string) => void;
 }
 
+// Define types for cytoscape elements
+interface NodeData {
+  id: string;
+  label: string;
+  type: string;
+}
+
+interface EdgeData {
+  source: string;
+  target: string;
+  type: string;
+}
+
+interface CytoscapeElement {
+  data: NodeData | EdgeData;
+  position?: { x: number; y: number };
+}
+
 // 2. Accept and destructure the props
 export default function ConstellationNetwork({
   onNodeClick,
 }: ConstellationNetworkProps) {
   const cyRef = useRef<HTMLDivElement>(null);
-  const cyInstance = useRef<any>(null);
+  const cyInstance = useRef<cytoscape.Core | null>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
-    // ... (rest of your useEffects are fine)
     const updateDimensions = () => {
       setDimensions({
         width: window.innerWidth,
@@ -40,7 +57,6 @@ export default function ConstellationNetwork({
   useEffect(() => {
     if (!cyRef.current || cyInstance.current || dimensions.width === 0) return;
 
-    // ... (all your node/edge definitions are fine)
     // Get viewport dimensions
     const viewportWidth = dimensions.width;
     const viewportHeight = dimensions.height;
@@ -69,14 +85,14 @@ export default function ConstellationNetwork({
       {
         id: "disputes",
         label: "Disputes",
-        x: centerX - usableWidth * topicSpread * 0.9,
-        y: centerY + usableHeight * topicSpread * 0.7,
+        x: centerX - usableWidth * topicSpread * 1.1,
+        y: centerY + usableHeight * topicSpread * 1.1,
       },
       {
         id: "regulatory",
         label: "Regulatory & Compliance",
-        x: centerX + usableWidth * topicSpread * 0.9,
-        y: centerY + usableHeight * topicSpread * 0.7,
+        x: centerX + usableWidth * topicSpread * 1,
+        y: centerY + usableHeight * topicSpread * 1.15,
       },
     ];
 
@@ -107,7 +123,7 @@ export default function ConstellationNetwork({
       {
         id: "fintech",
         label: "FinTech & Digital Business",
-        x: centerX + usableWidth * subtopicSpread * 0.7,
+        x: centerX + usableWidth * subtopicSpread * 0.85,
         y: centerY + usableHeight * subtopicSpread * 0.2,
         parent: "corporate",
       },
@@ -116,14 +132,14 @@ export default function ConstellationNetwork({
         id: "trademark",
         label: "Trademark Infringement",
         x: centerX - usableWidth * subtopicSpread * 0.2,
-        y: centerY + usableHeight * subtopicSpread * 0.85,
+        y: centerY + usableHeight * subtopicSpread * 0.95,
         parent: "disputes",
       },
       {
         id: "crossborder",
         label: "Cross-Border Coordination",
         x: centerX - usableWidth * subtopicSpread * 0.75,
-        y: centerY + usableHeight * subtopicSpread * 0.7,
+        y: centerY + usableHeight * subtopicSpread * 1.1,
         parent: "disputes",
       },
       {
@@ -152,7 +168,7 @@ export default function ConstellationNetwork({
         id: "datalocalisation",
         label: "Data Localisation",
         x: centerX + usableWidth * subtopicSpread * 0.9,
-        y: centerY + usableHeight * subtopicSpread * 0.65,
+        y: centerY + usableHeight * subtopicSpread * 1,
         parent: "regulatory",
       },
       {
@@ -172,7 +188,7 @@ export default function ConstellationNetwork({
     ];
 
     // Create elements
-    const elements: any[] = [];
+    const elements: CytoscapeElement[] = [];
 
     // Add topics
     topics.forEach((topic) => {
@@ -240,7 +256,6 @@ export default function ConstellationNetwork({
       });
     });
 
-    // ... (rest of cytoscape initialization is fine)
     // Initialize Cytoscape
     const cy = cytoscape({
       container: cyRef.current,
@@ -388,13 +403,12 @@ export default function ConstellationNetwork({
     });
     cyInstance.current = cy;
 
-    // ... (hover logic is fine)
     // Hover delay management
     let hoverTimeout: NodeJS.Timeout | null = null;
-    let currentHoveredNode: any = null;
+    let currentHoveredNode: cytoscape.NodeSingular | null = null;
     const HOVER_DELAY = 100;
 
-    function activateHoverEffect(node: any) {
+    function activateHoverEffect(node: cytoscape.NodeSingular) {
       const connectedEdges = node.connectedEdges();
       const connectedNodes = connectedEdges.connectedNodes().not(node);
 
@@ -410,7 +424,7 @@ export default function ConstellationNetwork({
       cy.elements().removeClass("highlighted connected faded");
     }
 
-    cy.on("mouseover", "node", function (evt: any) {
+    cy.on("mouseover", "node", function (evt) {
       const node = evt.target;
 
       if (currentHoveredNode === node) {
@@ -430,7 +444,7 @@ export default function ConstellationNetwork({
       }, HOVER_DELAY);
     });
 
-    cy.on("mouseout", "node", function (evt: any) {
+    cy.on("mouseout", "node", function () {
       if (hoverTimeout) {
         clearTimeout(hoverTimeout);
         hoverTimeout = null;
@@ -440,8 +454,8 @@ export default function ConstellationNetwork({
       deactivateHoverEffect();
     });
 
-    // 3. Update the 'tap' handler
-    cy.on("tap", "node", function (evt: any) {
+    // Update the 'tap' handler
+    cy.on("tap", "node", function (evt) {
       const node = evt.target;
       // Pass the ID and type up to the parent
       onNodeClick(node.data("id"), node.data("type"));
@@ -453,7 +467,7 @@ export default function ConstellationNetwork({
         cyInstance.current = null;
       }
     };
-  }, [dimensions, onNodeClick]); // 4. Add onNodeClick to dependency array
+  }, [dimensions, onNodeClick]);
 
   return (
     <div className="relative w-full h-screen bg-white text-[#8D1A1B] overflow-hidden">
