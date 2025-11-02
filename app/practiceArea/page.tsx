@@ -1,35 +1,14 @@
-"use client";
 import ConstellationNetwork from "../components/GraphComponent";
-import { useRouter } from "next/navigation";
+
 import SubTopicComp from "../components/SubTopicComp";
 
 import { practiceAreas } from "../subTopicContent";
 
 const PracticeAreaPage = () => {
-  const router = useRouter();
-
-  const handleNodeClick = (nodeId: string, nodeType: string) => {
-    let targetId = nodeId;
-
-    if (nodeType === "subtopic") {
-      for (const area of practiceAreas) {
-        if (area.subtopics.some((sub) => sub.id === nodeId)) {
-          targetId = area.id;
-          break;
-        }
-      }
-    }
-
-    const element = document.getElementById(targetId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
-
   return (
     <div className="relative w-full font-sans">
       <div className="sticky top-0 w-full h-screen z-0">
-        <ConstellationNetwork onNodeClick={handleNodeClick} />
+        <ConstellationNetwork />
       </div>
 
       <div className="relative z-10 w-full">
@@ -63,14 +42,15 @@ const PracticeAreaPage = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-20 w-full max-w-5xl mx-auto pb-20">
                     {area.subtopics.map((subtopic, subIndex) => (
                       <div
-                        onClick={() => {
-                          router.push(`/practiceArea/${subtopic.id}`);
-                        }}
+                        // onClick={() => {
+                        //   router.push(`/practiceArea/${subtopic.id}`);
+                        // }}
                         key={subIndex}
                         id={subtopic.id}
                         className="cursor-pointer"
                       >
                         <SubTopicComp
+                          id={subtopic.id}
                           subTopic={subtopic.name}
                           imageUrl={subtopic.imageUrl}
                           items={subtopic.items}

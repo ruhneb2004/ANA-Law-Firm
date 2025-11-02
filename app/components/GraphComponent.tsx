@@ -4,16 +4,12 @@ import { useEffect, useRef, useState } from "react";
 import cytoscape from "cytoscape";
 import { Montserrat } from "next/font/google";
 import Link from "next/link";
+import { practiceAreas } from "../subTopicContent";
 
 export const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
 });
-
-// 1. Define the props interface
-interface ConstellationNetworkProps {
-  onNodeClick: (nodeId: string, nodeType: string) => void;
-}
 
 // Define types for cytoscape elements
 interface NodeData {
@@ -34,12 +30,28 @@ interface CytoscapeElement {
 }
 
 // 2. Accept and destructure the props
-export default function ConstellationNetwork({
-  onNodeClick,
-}: ConstellationNetworkProps) {
+export default function ConstellationNetwork() {
   const cyRef = useRef<HTMLDivElement>(null);
   const cyInstance = useRef<cytoscape.Core | null>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+
+  const handleNodeClick = (nodeId: string, nodeType: string) => {
+    let targetId = nodeId;
+
+    if (nodeType === "subtopic") {
+      for (const area of practiceAreas) {
+        if (area.subtopics.some((sub) => sub.id === nodeId)) {
+          targetId = area.id;
+          break;
+        }
+      }
+    }
+
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   useEffect(() => {
     const updateDimensions = () => {
@@ -458,7 +470,7 @@ export default function ConstellationNetwork({
     cy.on("tap", "node", function (evt) {
       const node = evt.target;
       // Pass the ID and type up to the parent
-      onNodeClick(node.data("id"), node.data("type"));
+      handleNodeClick(node.data("id"), node.data("type"));
     });
 
     return () => {
@@ -467,7 +479,7 @@ export default function ConstellationNetwork({
         cyInstance.current = null;
       }
     };
-  }, [dimensions, onNodeClick]);
+  }, [dimensions, handleNodeClick]);
 
   return (
     <div className="relative w-full h-screen bg-white text-[#8D1A1B] overflow-hidden">

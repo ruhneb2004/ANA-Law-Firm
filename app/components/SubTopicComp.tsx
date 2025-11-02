@@ -1,4 +1,7 @@
+import Link from "next/link";
+
 interface SubTopicCompProps {
+  id: string;
   subTopic: string;
   imageUrl: string;
   items: string[];
@@ -6,13 +9,14 @@ interface SubTopicCompProps {
 }
 
 const SubTopicComp = ({
+  id,
   subTopic,
   imageUrl,
   items,
   textColor,
 }: SubTopicCompProps) => {
   return (
-    <div className="cursor-pointer w-full group">
+    <Link href={id} className="cursor-pointer w-full group">
       <h3
         className={`text-xl md:text-2xl font-light tracking-wide mb-4 ${textColor}`}
       >
@@ -52,7 +56,7 @@ const SubTopicComp = ({
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

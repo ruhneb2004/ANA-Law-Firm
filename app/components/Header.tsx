@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 
 const HamburgerIcon = () => (
   <svg
@@ -41,8 +42,8 @@ const CloseIcon = () => (
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const headerRef = useRef<HTMLElement>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -61,6 +62,20 @@ export const Header = () => {
     };
   }, []);
 
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/blog", label: "Blog" },
+    { href: "/legal", label: "First Steps, Legally" },
+    { href: "/practiceArea", label: "Practice Area" },
+  ];
+
+  const isActive = (href: string) => {
+    if (href === "/") {
+      return pathname === "/";
+    }
+    return pathname.startsWith(href);
+  };
+
   return (
     <header className="relative z-50" ref={headerRef}>
       <div className="flex flex-row justify-between items-center p-6 md:p-8">
@@ -70,58 +85,47 @@ export const Header = () => {
           </Link>
         </div>
 
-        <nav className="hidden md:flex justify-between gap-16 lg:gap-24 px-10 text-[#8D1A1B] text-[16px] items-center font-light text-">
-          <Link href={"/"} className="hover:underline">
-            Home
-          </Link>
-          <Link href={"/blog"} className="hover:underline">
-            Blog
-          </Link>
-          <Link href={"/legal"} className="hover:underline">
-            First Steps, Legally
-          </Link>
-          <Link href={"/practiceArea"} className="hover:underline">
-            Practice Area
-          </Link>
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex justify-between gap-16 lg:gap-24 px-10 text-[#8D1A1B] text-[16px] items-center font-light">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={`hover:underline transition-all ${
+                isActive(link.href) ? "underline" : ""
+              }`}
+            >
+              {link.label}
+            </Link>
+          ))}
         </nav>
 
+        {/* Mobile Menu Button */}
         <div className="md:hidden">
-          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-">
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="text-[#8D1A1B]"
+          >
             {isMenuOpen ? <CloseIcon /> : <HamburgerIcon />}
           </button>
         </div>
       </div>
 
+      {/* Mobile Navigation */}
       {isMenuOpen && (
         <nav className="md:hidden absolute top-full left-0 w-full bg-white text-[#8D1A1B] shadow-lg flex flex-col items-center p-4">
-          <Link
-            href={"/"}
-            className="py-3 text- hover:underline w-full text-center"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Home
-          </Link>
-          <Link
-            href={"/blog"}
-            className="py-3 text- hover:underline w-full text-center"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Blog
-          </Link>
-          <Link
-            href={"/legal"}
-            className="py-3 text- hover:underline w-full text-center"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            First Steps, Legally
-          </Link>
-          <Link
-            href={"/practiceArea"}
-            className="py-3 text- hover:underline w-full text-center"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Practice Area
-          </Link>
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={`py-3 hover:underline w-full text-center ${
+                isActive(link.href) ? "underline" : ""
+              }`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {link.label}
+            </Link>
+          ))}
         </nav>
       )}
     </header>
