@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
-import Link from "next/link";
 import Image from "next/image";
 import ConstellationNetwork from "./components/GraphComponent";
 
