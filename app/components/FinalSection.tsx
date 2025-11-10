@@ -22,7 +22,7 @@ export function FinalSection() {
       {/* Black Section */}
       <motion.div
         style={{ opacity: blackOpacity }}
-        className="sticky top-0 h-screen w-full flex items-center justify-center bg-black px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 z-40"
+        className="sticky top-0 h-screen w-full flex items-center justify-center bg-[#8D1A1B] px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 z-40"
       >
         <motion.p
           style={{ opacity: textOpacity }}
@@ -32,7 +32,7 @@ export function FinalSection() {
           Leave that to us.
         </motion.p>
       </motion.div>
-      <div className="absolute w-full h-screen bg-black inset-0"></div>
+      <div className="absolute w-full h-screen bg-[#8D1A1B] inset-0"></div>
 
       {/* White Section */}
       <motion.div
