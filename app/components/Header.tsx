@@ -65,8 +65,9 @@ export const Header = () => {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/blog", label: "Blog" },
+    { href: "/practiceArea", label: "Practice Areas | T" },
+    { href: "/aboutUs", label: "About Us" },
     { href: "/legal", label: "First Steps, Legally" },
-    { href: "/practiceArea", label: "Practice Area" },
   ];
 
   const isActive = (href: string) => {
