@@ -81,7 +81,7 @@ export const Header = () => {
       <div className="flex flex-row justify-between items-center p-6 md:p-8">
         <div className="flex items-center justify-center transition-transform duration-500 hover:rotate-12 hover:scale-110">
           <Link href="/">
-            <Image alt="logo" src={"/Logo.avif"} width={40} height={40} />
+            <Image alt="logo" src={"/ANA_Logo.avif"} width={200} height={200} />
           </Link>
         </div>
 

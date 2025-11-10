@@ -25,7 +25,7 @@ export function CardsSection() {
   return (
     <div
       ref={containerRef}
-      className="relative -mt-32 xs:-mt-36 sm:-mt-44 md:-mt-54 h-[250vh] w-full bg-transparent z-20"
+      className="relative -mt-32 xs:-mt-36 sm:-mt-44 md:-mt-39 h-[250vh] w-full bg-transparent z-20"
     >
       <div className="sticky top-0 min-h-screen h-auto flex flex-col items-center justify-center bg-[#8D1A1B] w-[96%] sm:w-[94%] mx-auto overflow-hidden px-3 xs:px-4 sm:px-6 md:px-8 py-12 xs:py-14 sm:py-16 md:py-20 lg:py-24">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-4 xs:gap-5 sm:gap-6 md:gap-8 lg:gap-10 w-full max-w-7xl my-auto">
@@ -33,16 +33,16 @@ export function CardsSection() {
           <motion.div
             style={{ x: card1X, rotate: card1Rotate, opacity: card1Opacity }}
             transition={{ type: "spring", stiffness: 60, damping: 20 }}
-            className="flex flex-col justify-between w-full max-w-sm lg:max-w-md p-4 xs:p-5 sm:p-6 md:p-8 bg-white/10 backdrop-blur-md rounded-lg sm:rounded-xl md:rounded-2xl shadow-lg text-white md:h-102"
+            className="flex flex-col justify-between w-full max-w-sm lg:max-w-md p-4 xs:p-5 sm:p-6 md:p-8 bg-white/10 backdrop-blur-md rounded-lg sm:rounded-xl md:rounded-2xl shadow-lg text-white  lg:h-128 xl:h-104"
           >
             <div>
-              <div className="italic font-light text-2xl xs:text-3xl sm:text-4xl md:text-[45px] leading-tight">
+              <div className="italic font-light text-2xl xs:text-3xl sm:text-4xl md:text-[45px] leading-8 text-center">
                 Client First
               </div>
-              <div className="mb-2 xs:mb-3 sm:mb-4 leading-tight text-2xl xs:text-3xl sm:text-4xl md:text-[45px]">
+              <div className="mb-2 xs:mb-3 sm:mb-4 leading-tight text-2xl xs:text-3xl sm:text-4xl md:text-[45px] text-center">
                 Approach
               </div>
-              <p className="text-sm xs:text-base sm:text-lg md:text-xl leading-snug text-white/90">
+              <p className="text-sm xs:text-base sm:text-lg md:text-xl leading-snug text-center text-white/90">
                 Our strength lies in our strong commitment to providing the
                 highest quality of services for businesses & individuals alike.
                 Anything the client needs help with legally, we deliver.
@@ -54,7 +54,7 @@ export function CardsSection() {
           <motion.div
             style={{ x: card2X, rotate: card2Rotate, opacity: card2Opacity }}
             transition={{ type: "spring", stiffness: 60, damping: 20 }}
-            className="flex flex-col justify-between w-full max-w-sm lg:max-w-md p-4 xs:p-5 sm:p-6 md:p-8 bg-white/10 backdrop-blur-md rounded-lg sm:rounded-xl md:rounded-2xl shadow-lg text-white"
+            className="flex flex-col justify-between w-full max-w-sm lg:max-w-md p-4 xs:p-5 sm:p-6 md:p-8 bg-white/10 backdrop-blur-md rounded-lg sm:rounded-xl md:rounded-2xl shadow-lg text-white  lg:h-128 xl:h-104 text-center"
           >
             <div>
               <div className="leading-tight text-2xl xs:text-3xl sm:text-4xl md:text-[45px]">
@@ -76,7 +76,7 @@ export function CardsSection() {
           <motion.div
             style={{ x: card3X, rotate: card3Rotate, opacity: card3Opacity }}
             transition={{ type: "spring", stiffness: 60, damping: 20 }}
-            className="flex flex-col justify-between w-full max-w-sm lg:max-w-md p-4 xs:p-5 sm:p-6 md:p-8 bg-white/10 backdrop-blur-md rounded-lg sm:rounded-xl md:rounded-2xl shadow-lg text-white"
+            className="flex flex-col justify-between w-full max-w-sm lg:max-w-md p-4 xs:p-5 sm:p-6 md:p-8 bg-white/10 backdrop-blur-md rounded-lg sm:rounded-xl md:rounded-2xl shadow-lg text-white lg:h-128 xl:h-104 text-center"
           >
             <div>
               <div className="mb-1 xs:mb-2 leading-tight text-2xl xs:text-3xl sm:text-4xl md:text-[45px]">

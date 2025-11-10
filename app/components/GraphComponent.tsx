@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import cytoscape from "cytoscape";
 import { Montserrat } from "next/font/google";
 import Link from "next/link";
@@ -35,7 +35,7 @@ export default function ConstellationNetwork() {
   const cyInstance = useRef<cytoscape.Core | null>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
-  const handleNodeClick = (nodeId: string, nodeType: string) => {
+  const handleNodeClick = useCallback((nodeId: string, nodeType: string) => {
     let targetId = nodeId;
 
     if (nodeType === "subtopic") {
@@ -51,7 +51,7 @@ export default function ConstellationNetwork() {
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-  };
+  }, []);
 
   useEffect(() => {
     const updateDimensions = () => {
