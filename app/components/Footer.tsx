@@ -21,7 +21,13 @@ const Footer: React.FC = () => {
             </a>
           </p>
           <p className="text-sm">Fax: +91 22 6112 8485</p>
-          <p className="text-sm">Email:</p>
+          <p className="text-sm mb-5">Email:</p>
+          <a
+            href="mailto:your-email@example.com"
+            className="inline-block text-md border py-2 px-4 rounded-md  transition-colors"
+          >
+            Get in Touch
+          </a>
         </div>
 
         <div className="space-y-4">

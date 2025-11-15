@@ -122,7 +122,7 @@ export const BlogCard = ({ blogDetail }: BlogCardProps) => {
                 )}
               </div>
             </div>
-            <div className="flex-grow"></div>
+            <div className="grow"></div>
             <div>
               <div className="mb-2 inline-block bg-teal-600 px-3 py-1 text-xs font-semibold">
                 {blogDetail.category}

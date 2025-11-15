@@ -1,6 +1,6 @@
 import { CardsSection } from "./components/CardsSection";
 import { FinalSection } from "./components/FinalSection";
-import Footer from "./components/Footer";
+
 import { FoundationSection } from "./components/FoundationSection";
 import { HeroSection } from "./components/HeroSection";
 import { InsightsSection } from "./components/InsightsSection";
@@ -12,10 +12,11 @@ export default function Home() {
       <HeroSection />
       <CardsSection />
       <QuoteSection />
-      <FoundationSection />
+      <div id="foundation">
+        <FoundationSection />
+      </div>
       <InsightsSection />
       <FinalSection />
-      <Footer />
     </div>
   );
 }

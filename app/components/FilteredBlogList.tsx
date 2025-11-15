@@ -29,7 +29,7 @@ export const FilteredBlogList = ({ posts, tags }: FilteredBlogListProps) => {
       {/* FILTER CONTROLS */}
       <div className="flex flex-col md:flex-row justify-between items-center mx-4 md:mx-12 lg:mx-20">
         <div className="flex gap-4 text-md px-4 font-light mb-8 md:mb-0">
-          {["All Posts", "Articles", "Newsletter"].map((category) => (
+          {["All Posts", "Article", "Newsletter"].map((category) => (
             <button
               key={category}
               onClick={() => handleFilterClick(category)}

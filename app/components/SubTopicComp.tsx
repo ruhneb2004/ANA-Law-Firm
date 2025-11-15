@@ -16,7 +16,7 @@ const SubTopicComp = ({
   textColor,
 }: SubTopicCompProps) => {
   return (
-    <Link href={id} className="cursor-pointer w-full group">
+    <Link href={`practiceArea/${id}`} className="cursor-pointer w-full group">
       <h3
         className={`text-xl md:text-2xl font-light tracking-wide mb-4 ${textColor}`}
       >
