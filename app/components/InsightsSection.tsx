@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const montserrat = { className: "font-sans" };
 const playfair = { className: "font-serif" };
@@ -52,7 +53,10 @@ export function InsightsSection() {
               <h2 className="text-4xl xs:text-5xl sm:text-6xl md:text-6xl lg:text-6xl font-light text-[#8D1A1B] mb-4 xs:mb-5 sm:mb-6">
                 Insights
               </h2>
-              <button className="group flex items-center gap-3 text-gray-900 text-sm xs:text-base sm:text-lg hover:text-[#8D1A1B] transition-colors duration-300">
+              <Link
+                href={"/blog"}
+                className="group flex items-center gap-3 text-gray-900 text-sm xs:text-base sm:text-lg hover:text-[#8D1A1B] transition-colors duration-300"
+              >
                 <span className="hover:underline">explore more</span>
                 <svg
                   className="w-3 h-3 xs:w-4 xs:h-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"
@@ -64,7 +68,7 @@ export function InsightsSection() {
                   <line x1="7" y1="17" x2="17" y2="7" />
                   <polyline points="7 7 17 7 17 17" />
                 </svg>
-              </button>
+              </Link>
             </motion.div>
 
             {/* Right side - Hidden on mobile, shown on md+ */}

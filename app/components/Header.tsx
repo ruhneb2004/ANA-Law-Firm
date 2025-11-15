@@ -65,8 +65,8 @@ export const Header = () => {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/practiceArea", label: "Practice Areas" },
-    { href: "/#foundation", label: "About Us" },
     { href: "/blog", label: "Blog" },
+    { href: "/#foundation", label: "About Us" },
   ];
 
   const isActive = (href: string) => {
@@ -79,7 +79,7 @@ export const Header = () => {
   return (
     <header className="relative z-50" ref={headerRef}>
       <div className="flex flex-row justify-between items-center p-6 md:p-8">
-        <div className="flex items-center justify-center transition-transform duration-500 hover:rotate-12 hover:scale-110">
+        <div className="flex items-center justify-center ">
           <Link href="/">
             <Image alt="logo" src={"/ANA_Logo.avif"} width={200} height={200} />
           </Link>

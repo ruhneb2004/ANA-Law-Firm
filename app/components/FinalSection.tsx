@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { TopicComp } from "./TopicComp";
 import { PracticeArea } from "../subTopicContent";
+import { MarqueeDemo } from "./TestimonialMarquee";
 
 const playfair = { className: "font-serif" };
 
@@ -56,7 +57,6 @@ const topicCompData: PracticeArea = {
     },
   ],
 };
-
 export function FinalSection() {
   const finalRef = useRef(null);
   const { scrollYProgress: finalProgress } = useScroll({
@@ -69,7 +69,7 @@ export function FinalSection() {
 
   return (
     <div ref={finalRef} className="relative h-[300vh] w-full z-60">
-      {/* Black Section */}
+      {/* Black Section (Fading Text) */}
       <motion.div
         style={{ opacity: blackOpacity }}
         className="sticky top-0 h-screen w-full flex items-center justify-center bg-white px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 z-40"
@@ -82,45 +82,41 @@ export function FinalSection() {
           Leave that to us.
         </motion.p>
       </motion.div>
+
+      {/* This is the white background for the Fading Text section */}
       <div className="absolute w-full h-screen bg-white inset-0"></div>
 
-      {/* White Section */}
+      {/* "How It All Started" Section */}
       <motion.div
         style={{ opacity: 1 }}
-        className="sticky top-0 h-screen w-full flex items-center justify-center bg-white z-20"
+        className="absolute top-[100vh] w-full overflow-hidden h-screen z-20"
       >
-        <section className="bg-white w-full">
-          <div className="max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 lg:px-8">
-            <Image
-              className="w-full aspect-video sm:aspect-5/2 rounded-lg sm:rounded-xl md:rounded-2xl object-cover mb-8 xs:mb-10 sm:mb-12 md:mb-16"
-              src="/landscape.avif"
-              alt="Aerial view of a modern plaza"
-              width={1920}
-              height={768}
-              priority
-            />
+        <section className=" bg-white w-full h-full">
+          <div className="max-w-7xl flex flex-col gap-10 mx-auto px-4 xs:px-6 sm:px-8 lg:px-8">
+            {/*
+        THIS BLOCK IS FIXED:
+        - Removed the 'md:col-span-1' and 'md:col-span-2' divs.
+        - Placed h2 and p directly inside 'text-center'.
+        - Added 'space-y-4' for spacing.
+      */}
+            <div className="text-center space-y-4">
+              <h2 className="text-2xl xs:text-3xl sm:text-5xl tracking-tight text-gray-900">
+                How It All Started
+              </h2>
+              <p className="text-sm xs:text-base sm:text-lg leading-relaxed text-gray-700">
+                This is a space to share more about the business...
+              </p>
+            </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 xs:gap-8 sm:gap-10 md:gap-12 lg:gap-16">
-              <div className="lg:col-span-1">
-                <h2 className="text-2xl xs:text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 mb-4 lg:mb-0">
-                  How It All Started
-                </h2>
-              </div>
-
-              <div className="lg:col-span-2 space-y-4 xs:space-y-5 sm:space-y-6">
-                <p className="text-sm xs:text-base sm:text-lg leading-relaxed text-gray-700">
-                  This is a space to share more about the business...
-                </p>
-                <p className="text-sm xs:text-base sm:text-lg leading-relaxed text-gray-700">
-                  Let the writing speak for itself...
-                </p>
-              </div>
+            <div className="w-full flex items-center rounded-lg sm:rounded-xl md:rounded-2xl object-cover">
+              <MarqueeDemo />
             </div>
           </div>
         </section>
       </motion.div>
 
-      <div className="relative h-screen w-full z-70">
+      {/* TopicComp Section */}
+      <div className="absolute top-[200vh] h-screen w-full z-70">
         <div className="sticky top-0 h-screen w-full bg-gray-100">
           <div className="relative h-full" style={{ zIndex: 100 }}>
             <TopicComp
