@@ -2,7 +2,7 @@ export interface BlogDetail {
   imageUrl: string;
   title: string;
   slug: string;
-  category: "Articles" | "Newsletter";
+  category: "Article" | "Newsletter";
   body: string;
   date: string;
   tags?: string[]; // ADDED: Optional tags property
@@ -25,7 +25,7 @@ export const blogDetails: BlogDetail[] = [
     title:
       "The 72-Hour Clock: Key Takeaways and Urgent Compliance Mandates under India’s DPDP Act, 2023",
     slug: "welcome-to-the-blog",
-    category: "Articles",
+    category: "Article",
     body: "The Digital Personal Data Protection (DPDP) Act, 2023, is not just a regulatory shift; it’s a wholesale transformation of how businesses must handle personal data. With the subsequent notification of the DPDP Rules, 2025, India has established one of the world's most demanding privacy regimes. For any business operating in India, the most urgent mandate—carrying penalties up to ₹250 Crores per breach—revolves around the 72-hour clock for data breach reporting.",
     date: "2025-07-13",
     tags: ["Privacy", "Technology"],
@@ -35,7 +35,7 @@ export const blogDetails: BlogDetail[] = [
     title:
       "The Supply Chain Tightrope: Navigating the New Digital and Material Requirements of India’s EPR Law",
     slug: "hawaii-club-material",
-    category: "Articles",
+    category: "Article",
     body: "This is a sample blog body content that is long enough to properly calculate the read time...",
     date: "2025-07-13",
     tags: ["Supply Chain"],
@@ -44,7 +44,7 @@ export const blogDetails: BlogDetail[] = [
     imageUrl: "/dark.jpeg",
     title: "Lexology – Trademarks in India, 2025 by ANA Law Group",
     slug: "kungfu-panda-limited",
-    category: "Articles",
+    category: "Article",
     body: "This Lexology guide on Trademarks in India (2025) provides a comprehensive legal and procedural overview of the Indian trademark regime. The report details the primary domestic legislation (Trade Marks Act 1999) and India's commitment to international agreements (Paris Convention, Madrid Protocol, Nice Agreement). It thoroughly covers the registration lifecycle, including who can apply, what is registrable (including non-traditional marks like sound and shape marks), and the benefits of registration (e.g., exclusivity and prima facie validity).",
     date: "2025-07-13",
     tags: ["IP", "Trademark"],

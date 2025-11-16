@@ -18,7 +18,7 @@ export const FilteredBlogList = ({ posts, tags }: FilteredBlogListProps) => {
 
   const filteredPosts = posts.filter((post) => {
     if (activeFilter === "All Posts") return true;
-    if (activeFilter === "Articles" || activeFilter === "Newsletter") {
+    if (activeFilter === "Article" || activeFilter === "Newsletter") {
       return post.category === activeFilter;
     }
     return post.tags?.includes(activeFilter);
