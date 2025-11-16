@@ -8,32 +8,27 @@ const reviews = [
   {
     name: "Jack",
     body: "I've never seen anything like this before. It's amazing. I love it. just wow !. I am speechless. Just wow ! and this is super cool and the best thing ever. yep this is some gibberish to fill space.",
-    img: "/fight_club.jpeg",
+    img: "/2015.jpg",
   },
   {
     name: "Jill",
     body: "I don't know what to say. I'm speechless. This is amazing.",
-    img: "/fight_club.jpeg",
+    img: "/chamber_creative_2017.jpg",
   },
   {
     name: "John",
     body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "/fight_club.jpeg",
+    img: "/chamber-creative 2014.jpg",
   },
   {
     name: "Jane",
     body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "/fight_club.jpeg",
+    img: "/chamber-logo-2018.png",
   },
   {
     name: "Jenny",
     body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "/fight_club.jpeg",
-  },
-  {
-    name: "James",
-    body: "I'm at a loss for words. This is amazing. I love it. Just a wow experience overall. And I would recommend it to everyone. So yeah, just go for it. And this is some more gibberish to fill space.",
-    img: "/fight_club.jpeg",
+    img: "/chamber-logo-2019.png",
   },
 ];
 
@@ -57,12 +52,12 @@ const FilmReviewCard = ({
         "dark:border-gray-50/10 dark:bg-gray-50/10 dark:hover:bg-gray-50/15"
       )}
     >
-      <div className="relative w-1/3 min-w-[80px] max-w-[100px] sm:min-w-[120px] sm:max-w-[160px] shrink-0 overflow-hidden rounded-l-xl">
+      <div className="relative w-1/3 h-52 min-w-[80px] max-w-[100px] sm:min-w-[120px] sm:max-w-[160px] shrink-0 overflow-hidden rounded-l-xl">
         <Image
           src={posterImg}
           alt="Film Poster"
           fill
-          className="object-cover"
+          className="object-center"
           sizes="(max-width: 640px) 100px, 160px"
         />
       </div>
