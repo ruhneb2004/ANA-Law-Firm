@@ -25,7 +25,7 @@ const topicCompData: PracticeArea = {
         "Technology & Innovation",
         "Transactions & Investment",
       ],
-      imageUrl: "/blog1.jpg",
+      imageUrl: "/dark.jpeg",
       content:
         "This is the detailed content for Franchising & Licensing. It explores the intricate legal frameworks governing franchise operations and intellectual property licensing. We advise on everything from initial agreement drafting to dispute resolution, ensuring your brand is protected while you expand. Key areas include IP & Brand Strategy, compliance with Online Content & Media regulations, and adherence to Packaging & Consumer Law.",
     },
@@ -38,7 +38,8 @@ const topicCompData: PracticeArea = {
         "Trade, Competition & Foreign Investment",
         "Sustainability, Policy & Administrative Compliance",
       ],
-      imageUrl: "/blog1.jpg",
+      imageUrl: "/dark.jpeg",
+
       content:
         "This is the detailed content for IP & Brand Strategy. Our team helps you build and defend your most valuable assets: your intellectual property. We go beyond simple registration, developing comprehensive strategies that align with your business goals. This includes managing portfolios, litigating Trademark Infringement cases, and navigating the complexities of Online Content & Media.",
     },
@@ -51,7 +52,8 @@ const topicCompData: PracticeArea = {
         "Arbitration, Mediation and other Forms of Dispute Resolution",
         "Digital, Brand & Platform Enforcement",
       ],
-      imageUrl: "/blog1.jpg",
+      imageUrl: "/dark.jpeg",
+
       content:
         "This is the detailed content for Employment & HR Advisory. We provide guidance on all aspects of the employment lifecycle, from hiring to termination. This includes drafting contracts, ensuring Data Protection & Privacy compliance for employee data, and managing Cross-Border Coordination for international workforces.",
     },

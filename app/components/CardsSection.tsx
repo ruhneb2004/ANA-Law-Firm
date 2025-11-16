@@ -36,7 +36,7 @@ export function CardsSection() {
             className="flex flex-col justify-between w-full max-w-sm lg:max-w-md p-4 xs:p-5 sm:p-6 md:p-8 bg-white/10 backdrop-blur-md rounded-lg sm:rounded-xl md:rounded-2xl shadow-lg text-white  lg:h-128 xl:h-104"
           >
             <div>
-              <div className="italic font-light text-2xl xs:text-3xl sm:text-4xl md:text-[45px] leading-8 text-center">
+              <div className="font-light text-2xl xs:text-3xl sm:text-4xl md:text-[45px] leading-8 text-center">
                 Precision
               </div>
               <div className="mb-2 xs:mb-3 sm:mb-4 leading-tight text-2xl xs:text-3xl sm:text-4xl md:text-[45px] text-center"></div>
@@ -77,7 +77,6 @@ export function CardsSection() {
             <div>
               <div className="mb-1 xs:mb-2 leading-tight text-2xl xs:text-3xl sm:text-4xl md:text-[45px]">
                 Never Unprepared <br />
-                <span className="italic">Everything</span>
               </div>
               <div className="mb-2 xs:mb-3 sm:mb-4 leading-tight text-2xl xs:text-3xl sm:text-4xl md:text-[45px]"></div>
               <p className="leading-snug text-sm xs:text-base sm:text-lg md:text-xl text-white/90">
