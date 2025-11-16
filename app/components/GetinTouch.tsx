@@ -36,7 +36,7 @@ export function GetInTouch() {
 
   return (
     <div ref={insightsRef} className="relative h-[300vh] w-full z-40">
-      <div className="sticky top-0 h-screen bg-[#8D1A1B] flex w-full overflow-hidden p-4 sm:p-6 md:p-10">
+      <div className="sticky top-0 h-screen flex w-full overflow-hidden p-4 sm:p-6 md:p-10">
         {/* Base Layout - Full Width Insights Title */}
         <div className="absolute top-4 right-4 left-4 bottom-0 sm:top-8 sm:right-8 sm:left-8 md:top-15 md:right-15 md:left-15 rounded-t-[20px] sm:rounded-t-[30px] md:rounded-t-[40px] w-auto bg-black flex items-center justify-center">
           <div className="w-full h-full flex flex-col items-center justify-center px-4 xs:px-6 sm:px-8 md:px-10">

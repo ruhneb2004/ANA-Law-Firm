@@ -6,6 +6,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { TopicComp } from "./TopicComp";
 import { PracticeArea } from "../subTopicContent";
 import { MarqueeDemo } from "./TestimonialMarquee";
+import GetInTouch from "./GetinTouch";
 
 const playfair = { className: "font-serif" };
 
@@ -68,7 +69,7 @@ export function FinalSection() {
   const textOpacity = useTransform(finalProgress, [0, 0.5], [1, 0]);
 
   return (
-    <div ref={finalRef} className="relative h-[300vh] w-full z-60">
+    <div ref={finalRef} className="relative h-[600vh] w-full z-60">
       {/* Black Section (Fading Text) */}
       <motion.div
         style={{ opacity: blackOpacity }}
@@ -82,10 +83,8 @@ export function FinalSection() {
           Leave that to us.
         </motion.p>
       </motion.div>
-
       {/* This is the white background for the Fading Text section */}
       <div className="absolute w-full h-screen bg-white inset-0"></div>
-
       {/* "How It All Started" Section */}
       <motion.div
         style={{ opacity: 1 }}
@@ -108,10 +107,10 @@ export function FinalSection() {
           </div>
         </section>
       </motion.div>
-
       {/* TopicComp Section */}
-      <div className="absolute top-[200vh] h-screen w-full z-70">
-        <div className="sticky top-0 h-screen w-full bg-gray-100">
+      {/* TopicComp Section */}
+      <div className="absolute top-[200vh] h-[400vh] w-full z-70">
+        <div className="sticky top-0 h-screen w-full bg-gray-100 overflow-hidden">
           <div className="relative h-full" style={{ zIndex: 100 }}>
             <TopicComp
               area={topicCompData}
@@ -121,6 +120,11 @@ export function FinalSection() {
             />
           </div>
         </div>
+      </div>
+
+      {/* GetInTouch overlays on top */}
+      <div className="absolute top-[300vh] w-full z-80">
+        <GetInTouch />
       </div>
     </div>
   );

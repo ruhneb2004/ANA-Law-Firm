@@ -1,4 +1,3 @@
-import { GetInTouch } from "../components/GetinTouch";
 import ConstellationNetwork from "../components/GraphComponent";
 
 import { TopicComp } from "../components/TopicComp";
@@ -29,7 +28,6 @@ const PracticeAreaPage = () => {
           );
         })}
       </div>
-      <GetInTouch />
     </div>
   );
 };
