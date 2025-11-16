@@ -18,158 +18,185 @@ export interface PracticeArea {
 export const practiceAreas: PracticeArea[] = [
   {
     id: "corporate",
-    title: "CORPORATE & TRANSACTIONS",
-    description:
-      "Strategic legal counsel for business growth, investments, and commercial operations across diverse industries.",
+    title: "Corporate & Transactions",
+    description: "",
     subtopics: [
       {
         id: "franchising",
-        name: "Franchising & Licensing",
+        name: "Corporate & Commercial",
         items: [
-          "IP & Brand Strategy",
-          "Online Content & Media",
-          "Packaging & Consumer Law",
+          "Corporate Commercial",
+          "Franchising & Licensing",
+          "IP & Brand",
+          "Real Estate",
+          "Outsourcing & Technology Transactions",
         ],
-        imageUrl: "/blog1.jpg",
+        imageUrl: "/dark.jpeg",
         content:
-          "This is the detailed content for Franchising & Licensing. It explores the intricate legal frameworks governing franchise operations and intellectual property licensing. We advise on everything from initial agreement drafting to dispute resolution, ensuring your brand is protected while you expand. Key areas include IP & Brand Strategy, compliance with Online Content & Media regulations, and adherence to Packaging & Consumer Law.",
+          "Corporate and commercial work is where ideas turn into operating reality. We help businesses move from intent to execution, setting up structures that scale, negotiating relationships that last, and mapping the legal foundations that support growth. Whether it's a franchise expanding across cities, a brand securing its licensing model, a company entering a new market, or a real estate transaction shaping the next phase of operations, we bring clarity to every moving part.\n\nOur work often begins at the centre of a business relationship: contracts, partnerships, distribution, and commercial strategy. From there, we help clients protect and extend what makes their business valuable, starting from brand identity, intellectual property, and the technology or content that powers their model. We streamline outsourcing arrangements, refine digital and technology-led partnerships, and structure deals that help companies scale responsibly.\n\nEach engagement is built on the same philosophy: practical solutions, commercially aligned decisions, and a deep understanding of how business, brand, and operations interact in a fast-moving market.",
       },
       {
         id: "ipstrategy",
-        name: "IP & Brand Strategy",
+        name: "Technology & Innovation",
         items: [
-          "Franchising & Licensing",
-          "Trademark Infringement",
-          "Online Content & Media",
+          "FinTech & Digital Business",
+          "Online Content, Platforms & Media",
+          "Technology Commercialisation",
+          "Emerging Tech & Digital Infrastructure",
         ],
-        imageUrl: "/blog1.jpg",
+        imageUrl: "/dark.jpeg",
         content:
-          "This is the detailed content for IP & Brand Strategy. Our team helps you build and defend your most valuable assets: your intellectual property. We go beyond simple registration, developing comprehensive strategies that align with your business goals. This includes managing portfolios, litigating Trademark Infringement cases, and navigating the complexities of Online Content & Media.",
+          "Technology-driven businesses grow fast, and the law around them shifts just as quickly. We support innovators from digital platforms to fintech ventures as they build products, expand markets, and commercialise ideas. Our work sits at the intersection of law, technology, and business strategy, helping clients navigate product launches, digital transactions, platform risks, and content-driven ecosystems.\n\nWhether a client is structuring a fintech model, managing data governance, scaling online content operations, or licensing technology across borders, we help convert innovation into workable, compliant business systems. We understand how platforms operate, how digital infrastructure evolves, and how emerging technologies create new regulatory and commercial challenges. Our approach is grounded in practicality: protect the idea, enable the model, and support growth that is both ambitious and responsible.",
       },
       {
         id: "employment",
         name: "Employment & HR Advisory",
-        items: ["Cross-Border Coordination", "Data Protection & Privacy"],
-        imageUrl: "/blog1.jpg",
+        items: [
+          "Employment & HR Advisory",
+          "Compensation & Workplace Policies",
+          "Senior Management Agreements",
+          "Cross-border Employment Structuring",
+        ],
+        imageUrl: "/dark.jpeg",
         content:
-          "This is the detailed content for Employment & HR Advisory. We provide guidance on all aspects of the employment lifecycle, from hiring to termination. This includes drafting contracts, ensuring Data Protection & Privacy compliance for employee data, and managing Cross-Border Coordination for international workforces.",
+          "People decisions shape the rhythm of an organisation. We help leadership teams navigate that responsibility with clarity and confidence from designing workplace policies to structuring leadership contracts and managing sensitive workforce issues. Whether a company is scaling, restructuring, or moving talent across borders, we bring legal precision to decisions that carry cultural and operational impact.\n\nOur work spans everything from day-to-day HR compliance to high-stakes executive agreements, compensation planning, and global mobility. We help organisations set expectations early, avoid disputes before they arise, and stay compliant in a landscape where labour rules evolve quickly. The goal is simple: align people, policy, and performance so the organisation can grow on a stable, human-centred foundation.",
       },
       {
         id: "fintech",
-        name: "FinTech & Digital Business",
-        items: ["Data Localisation", "Banking & Financial Disputes"],
-        imageUrl: "/blog1.jpg",
-        content:
-          "This is the detailed content for FinTech & Digital Business. The digital economy presents unique challenges. We assist clients in navigating Data Localisation laws, regulatory sandboxes, and the specific rules governing Banking & Financial Disputes in the digital space.",
-      },
-    ],
-  },
-  {
-    id: "disputes",
-    title: "DISPUTES",
-    description:
-      "Comprehensive dispute resolution services combining litigation expertise with strategic settlement approaches.",
-    subtopics: [
-      {
-        id: "trademark",
-        name: "Trademark Infringement",
+        name: "Transactions & Investment",
         items: [
-          "IP & Brand Strategy",
-          "Online Content & Media",
-          "Cross-Border Coordination",
+          "Mergers & Acquisitions",
+          "Private Equity & Venture Capital",
+          "Banking & Finance",
+          "Tax & Structuring",
+          "Cross-border Structuring & Assistance",
         ],
-        imageUrl: "/blog1.jpg",
+        imageUrl: "/dark.jpeg",
         content:
-          "This is the detailed content for Trademark Infringement. Protecting your brand's identity is paramount. We handle contentious matters including opposition, cancellation, and litigation. Our strategy often involves coordinating with IP & Brand Strategy teams and managing takedowns for Online Content & Media.",
-      },
-      {
-        id: "crossborder",
-        name: "Cross-Border Coordination",
-        items: [
-          "Takedowns & Enforcement",
-          "Banking & Financial Disputes",
-          "Employment & HR Advisory",
-        ],
-        imageUrl: "/blog1.jpg",
-        content:
-          "This is the detailed content for Cross-Border Coordination. Managing legal issues across multiple jurisdictions is complex. We act as a central hub, coordinating takedowns, managing international Banking & Financial Disputes, and ensuring seamless Employment & HR Advisory for global teams.",
-      },
-      {
-        id: "onlinecontent",
-        name: "Online Content & Media",
-        items: [
-          "IP & Brand Strategy",
-          "Takedowns",
-          "AI Governance",
-          "Packaging & Consumer",
-        ],
-        imageUrl: "/blog1.jpg",
-        content:
-          "This is the detailed content for Online Content & Media. We advise on issues from defamation and intermediary liability to AI Governance and digital advertising standards. This practice area is closely linked with IP & Brand Strategy, Takedowns, and Packaging & Consumer law.",
-      },
-      {
-        id: "banking",
-        name: "Banking & Financial Services Disputes",
-        items: ["Cross-Border Coordination", "FinTech & Digital Business"],
-        imageUrl: "/blog1.jpg",
-        content:
-          "This is the detailed content for Banking & Financial Services Disputes. We represent clients in complex financial litigation, regulatory investigations, and enforcement actions. Our expertise includes handling Cross-Border Coordination for international cases and advising FinTech & Digital Business clients.",
+          "Transactions are moments of transformation. We help businesses navigate M&A, investments, and financial structures with clarity and strategy, whether they are acquiring, being acquired, raising capital, or entering new markets. Our role is to simplify complexity: distilling negotiation priorities, aligning expectations, and creating transaction structures that stand up to both legal scrutiny and commercial pressure.\n\nFrom private equity deals to cross-border investments and financial arrangements, we guide clients through every stage of the transaction. This includes banking support, tax-efficient structuring, and multi-jurisdictional coordination. Our focus is always on long-term value: ensuring the transaction not only closes smoothly but positions the business for sustainable growth.",
       },
     ],
   },
   {
     id: "regulatory",
-    title: "REGULATORY & COMPLIANCE",
+    title: "Regulatory & Compliance",
     description:
       "Navigate complex regulatory frameworks with confidence through proactive compliance strategies and expert guidance.",
     subtopics: [
       {
         id: "dataprotection",
-        name: "Data Protection & Privacy",
+        name: "Consumer, Packaging & Product Regulation",
         items: [
-          "Employment & HR",
-          "Data Localisation",
-          "AI Governance & Accountability",
+          "Packaging, Labelling & Consumer Law",
+          "Advertising & Marketing Standards",
+          "E-commerce & Marketplace Rules",
         ],
-        imageUrl: "/blog1.jpg",
+        imageUrl: "/dark.jpeg",
         content:
-          "This is the detailed content for Data Protection & Privacy. We help clients navigate the global patchwork of privacy laws. Our work includes building compliance programs, managing data breaches, and advising on AI Governance. This is critical for Employment & HR (employee data) and Data Localisation strategies.",
+          "Regulation is the framework that keeps markets fair, products safe, and businesses accountable. We guide clients through the complex web of consumer, packaging, and product rules, ensuring that every label, claim, and disclosure meets legal requirements while supporting business objectives.\n\nFrom packaging and labelling to marketing communications and e-commerce platforms, we help companies align with sector-specific standards and mandatory disclosures. Whether it's health claims, ESG assertions, comparative advertising, or online consumer protection, our focus is on compliance that builds trust, mitigates risk, and fosters long-term credibility in the marketplace.",
       },
       {
         id: "datalocalisation",
-        name: "Data Localisation",
+        name: "Data, Technology & AI Regulation",
         items: [
           "Data Protection & Privacy",
           "AI Governance & Accountability",
-          "FinTech & Digital Business",
+          "Data Localisation & Cross-Border Transfers",
+          "Platform & Intermediary Regulation",
+          "Cybersecurity & Digital Infrastructure",
         ],
-        imageUrl: "/blog1.jpg",
+        imageUrl: "/dark.jpeg",
         content:
-          "This is the detailed content for Data Localisation. We provide strategic advice on data residency and cross-border data transfer requirements. This is a key consideration for Data Protection & Privacy, AI Governance, and operations in the FinTech & Digital Business sector.",
+          "Data is the lifeblood of modern business, and technology is reshaping the rules of engagement. We help clients navigate the evolving landscape of data protection, AI governance, and platform regulation, ensuring their innovations operate within legal and ethical boundaries.\n\nFrom privacy and cybersecurity to data localisation and cross-border transfers, we provide strategies that protect both business and consumer interests. For AI and digital platforms, we focus on accountability, transparency, and regulatory alignment, helping clients anticipate legal obligations while driving innovation.\n\nOur work balances compliance with operational flexibility, enabling businesses to harness technology confidently, manage risk, and maintain public trust in an increasingly digital world.",
       },
       {
         id: "aigovernance",
-        name: "AI Governance & Accountability",
+        name: "Trade, Competition & Foreign Investment",
         items: [
-          "Data Protection & Privacy",
-          "Data Localisation",
-          "Online Content & Media",
+          "Cross-Border Trade & Customs",
+          "Foreign Investment Approvals",
+          "Market Access Regulation",
+          "Competition & Antitrust",
         ],
-        imageUrl: "/blog1.jpg",
+        imageUrl: "/dark.jpeg",
         content:
-          "This is the detailed content for AI Governance & Accountability. As AI becomes ubiquitous, we help clients build ethical and compliant AI systems. This involves Data Protection & Privacy assessments, managing Data Localisation for training models, and advising on liability for AI-generated Online Content & Media.",
+          "Entering new markets or expanding globally requires more than ambition. It demands precision, foresight, and compliance. We guide clients through cross-border trade rules, foreign investment approvals, and competition laws to ensure seamless market access and sustainable growth.\n\nFrom navigating complex customs regimes to obtaining regulatory approvals for foreign investment, our role is to anticipate challenges and streamline processes. We also advise on antitrust and competition matters, helping clients compete fairly while safeguarding strategic interests.\n\nOur focus is on creating a regulatory roadmap that aligns with business objectives, mitigates risk, and positions companies to succeed in highly regulated, competitive environments.",
       },
       {
         id: "packaging",
-        name: "Packaging & Consumer Law",
+        name: "Sustainability, Policy & Administrative Compliance",
         items: [
-          "Franchising & Licensing",
-          "IP & Brand Strategy",
-          "Online Content & Media",
+          "ESG & Sustainability Governance",
+          "Environmental Approvals",
+          "Liaison & Regulatory Filings",
+          "Policy & Government Advisory",
         ],
-        imageUrl: "/blog1.jpg",
+        imageUrl: "/dark.jpeg",
         content:
-          "This is the detailed content for Packaging & Consumer Law. We ensure your products meet all regulatory requirements, from labeling to advertising. This practice intersects with Franchising & Licensing agreements, protects your IP & Brand Strategy, and governs your Online Content & Media advertising.",
+          "Sustainability and policy compliance are no longer optional. They are central to business resilience and reputation. We assist clients in meeting ESG obligations, obtaining environmental approvals, and liaising with regulators and government bodies to ensure smooth operations.\n\nFrom sustainability governance to regulatory filings, we help organisations embed compliance into strategy and operations. Our advisory ensures businesses meet current legal standards while anticipating future policy developments, maintaining credibility with stakeholders, and building a foundation for long-term impact.\n\nWe make administrative complexity manageable, translating policy requirements into actionable plans that support sustainable growth and regulatory confidence.",
+      },
+    ],
+  },
+  {
+    id: "disputes",
+    title: "Disputes",
+    description:
+      "Comprehensive dispute resolution services combining litigation expertise with strategic settlement approaches.",
+    subtopics: [
+      {
+        id: "trademark",
+        name: "Litigation & Regulatory Enforcement",
+        items: [
+          "Civil & Commercial Litigation",
+          "Writs, Injunctions & Urgent Relief",
+          "Regulatory Investigations & Notices",
+          "Compliance Breach Enforcement",
+          "Digital Platform & Marketplace Enforcement",
+          "Court-Mandated Negotiations & Settlements",
+        ],
+        imageUrl: "/dark.jpeg",
+        content:
+          "Disputes are moments that test both strategy and resilience. We guide clients through civil and commercial litigation, regulatory investigations, and enforcement actions, ensuring that their position is protected and their objectives advanced.\n\nWhether seeking urgent relief, managing compliance breaches, or navigating court-mandated settlements, we combine legal acumen with practical insight. Our work extends to digital platforms and marketplaces, helping clients enforce rights and mitigate reputational or financial risk. We simplify complexity, providing clarity and direction when stakes are high.",
+      },
+      {
+        id: "crossborder",
+        name: "Cross-Border Coordination & Enforcement",
+        items: [
+          "Multi-Jurisdictional Strategy & Document Coordination",
+          "Recognition & Enforcement of Foreign Judgements",
+          "Cross-Border Regulatory Interaction",
+          "Multi-Country Evidence & Discovery Support",
+          "Liaising with Foreign Counsel & Multi-Forum Alignment",
+        ],
+        imageUrl: "/dark.jpeg",
+        content:
+          "Business disputes often transcend borders, requiring careful coordination and strategic foresight. We assist clients in multi-jurisdictional matters, from recognising and enforcing foreign orders to liaising with overseas regulators and counsel.\n\nOur approach ensures alignment across multiple forums, efficient handling of evidence and discovery, and coherent strategies that respect local requirements while advancing global objectives. By navigating the complexities of cross-border enforcement, we help clients secure outcomes that are legally robust and commercially sound.",
+      },
+      {
+        id: "onlinecontent",
+        name: "Arbitration, Mediation and other Forms of Dispute Resolution",
+        items: [
+          "Domestic ADR",
+          "International ADR",
+          "Pre-Dispute Strategy & Negotiation Frameworks",
+          "Settlement structuring",
+        ],
+        imageUrl: "/dark.jpeg",
+        content:
+          "Not all disputes belong in court. We support clients in domestic and international alternative dispute resolution, including arbitration and mediation, offering structured frameworks to resolve conflicts efficiently.\n\nFrom pre-dispute planning and negotiation strategies to settlement structuring, we focus on achieving durable resolutions that preserve business relationships and minimise disruption. Our guidance ensures that ADR is used strategically, providing a controlled, cost-effective, and enforceable path to resolution.",
+      },
+      {
+        id: "banking",
+        name: "Digital, Brand & Platform Enforcement",
+        items: [
+          "Takedowns & Online Enforcement",
+          "Content Removal & Intermediary Escalations",
+          "Domain Name & Cybersquatting Proceedings",
+          "Digital Fraud & Malicious Use Intervention",
+        ],
+        imageUrl: "/dark.jpeg",
+        content:
+          "In the digital age, brand protection extends beyond traditional channels. We help clients safeguard their identity, reputation, and commercial interests across online platforms and marketplaces.\n\nOur work covers takedowns, content removal, domain disputes, and intervention against digital fraud, including phishing, impersonation, and counterfeit activity. By engaging with intermediaries, platforms, and enforcement mechanisms, we ensure that rights are defended promptly, strategically, and effectively in the digital sphere.",
       },
     ],
   },

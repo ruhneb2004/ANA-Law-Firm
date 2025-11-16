@@ -37,15 +37,14 @@ export function CardsSection() {
           >
             <div>
               <div className="italic font-light text-2xl xs:text-3xl sm:text-4xl md:text-[45px] leading-8 text-center">
-                Client First
+                Precision
               </div>
-              <div className="mb-2 xs:mb-3 sm:mb-4 leading-tight text-2xl xs:text-3xl sm:text-4xl md:text-[45px] text-center">
-                Approach
-              </div>
+              <div className="mb-2 xs:mb-3 sm:mb-4 leading-tight text-2xl xs:text-3xl sm:text-4xl md:text-[45px] text-center"></div>
               <p className="text-sm xs:text-base sm:text-lg md:text-xl leading-snug text-center text-white/90">
-                Our strength lies in our strong commitment to providing the
-                highest quality of services for businesses & individuals alike.
-                Anything the client needs help with legally, we deliver.
+                Our commitment to legal excellence is defined by precision in
+                every detail. We deliver meticulously researched advice and
+                documentation, ensuring every strategy is tailored for the best
+                possible client outcome.
               </p>
             </div>
           </motion.div>
@@ -58,16 +57,13 @@ export function CardsSection() {
           >
             <div>
               <div className="leading-tight text-2xl xs:text-3xl sm:text-4xl md:text-[45px]">
-                One Firm.
+                Quality
               </div>
-              <div className="italic font-light leading-tight mb-2 xs:mb-3 sm:mb-4 text-2xl xs:text-3xl sm:text-4xl md:text-[45px]">
-                Limitless Possibilities
-              </div>
+              <div className="italic font-light leading-tight mb-2 xs:mb-3 sm:mb-4 text-2xl xs:text-3xl sm:text-4xl md:text-[45px]"></div>
               <p className="text-sm xs:text-base sm:text-lg md:text-xl leading-snug text-white/90">
-                With our highly qualified teams, departments & network offices
-                across the globe and India, we provide an accessible &
-                dependable one-firm experience, ideal for long-term
-                relationships.
+                Our strength lies in our strong commitment to providing the
+                highest quality of services for businesses & individuals alike.
+                Anything the client needs help with legally, we deliver.
               </p>
             </div>
           </motion.div>
@@ -80,15 +76,15 @@ export function CardsSection() {
           >
             <div>
               <div className="mb-1 xs:mb-2 leading-tight text-2xl xs:text-3xl sm:text-4xl md:text-[45px]">
-                Quality In <span className="italic">Everything</span>
+                Never Unprepared <br />
+                <span className="italic">Everything</span>
               </div>
-              <div className="mb-2 xs:mb-3 sm:mb-4 leading-tight text-2xl xs:text-3xl sm:text-4xl md:text-[45px]">
-                We Do
-              </div>
+              <div className="mb-2 xs:mb-3 sm:mb-4 leading-tight text-2xl xs:text-3xl sm:text-4xl md:text-[45px]"></div>
               <p className="leading-snug text-sm xs:text-base sm:text-lg md:text-xl text-white/90">
-                Our services are as good as we are & hence we value personal
-                growth & performances of our teams, giving them opportunities &
-                raising their bars. Resulting in overall Client Happiness.
+                We live by our Motto of{" "}
+                <span className="italic">“Nunqum Non Paratus”</span> or “Never
+                Be Unprepared”, guaranteeing we are always ready to protect our
+                clients&apso; interests.
               </p>
             </div>
           </motion.div>

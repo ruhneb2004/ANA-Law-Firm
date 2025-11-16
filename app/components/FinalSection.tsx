@@ -12,17 +12,18 @@ const playfair = { className: "font-serif" };
 
 const topicCompData: PracticeArea = {
   id: "corporate",
-  title: "CORPORATE & TRANSACTIONS",
+  title: "Practice Areas",
   description:
-    "Strategic legal counsel for business growth, investments, and commercial operations across diverse industries.",
+    "Our expertise is structured to partner with today's enterprises, addressing legal needs across commercial transactions, evolving regulatory landscapes, and strategic conflict resolution.",
   subtopics: [
     {
       id: "franchising",
-      name: "Franchising & Licensing",
+      name: "Corporate & Transactions",
       items: [
-        "IP & Brand Strategy",
-        "Online Content & Media",
-        "Packaging & Consumer Law",
+        "Corporate & Commercial",
+        "Employment & HR Advisory",
+        "Technology & Innovation",
+        "Transactions & Investment",
       ],
       imageUrl: "/blog1.jpg",
       content:
@@ -30,11 +31,12 @@ const topicCompData: PracticeArea = {
     },
     {
       id: "ipstrategy",
-      name: "IP & Brand Strategy",
+      name: "Regulatory & Compliance",
       items: [
-        "Franchising & Licensing",
-        "Trademark Infringement",
-        "Online Content & Media",
+        "Consumer, Packaging & Product Regulation",
+        "Data, Technology & AI Regulation",
+        "Trade, Competition & Foreign Investment",
+        "Sustainability, Policy & Administrative Compliance",
       ],
       imageUrl: "/blog1.jpg",
       content:
@@ -42,22 +44,20 @@ const topicCompData: PracticeArea = {
     },
     {
       id: "employment",
-      name: "Employment & HR Advisory",
-      items: ["Cross-Border Coordination", "Data Protection & Privacy"],
+      name: "Disputes",
+      items: [
+        "Civil & Commercial Litigation",
+        "Cross-border Coordination & Enforcement",
+        "Arbitration, Mediation and other Forms of Dispute Resolution",
+        "Digital, Brand & Platform Enforcement",
+      ],
       imageUrl: "/blog1.jpg",
       content:
         "This is the detailed content for Employment & HR Advisory. We provide guidance on all aspects of the employment lifecycle, from hiring to termination. This includes drafting contracts, ensuring Data Protection & Privacy compliance for employee data, and managing Cross-Border Coordination for international workforces.",
     },
-    {
-      id: "fintech",
-      name: "FinTech & Digital Business",
-      items: ["Data Localisation", "Banking & Financial Disputes"],
-      imageUrl: "/blog1.jpg",
-      content:
-        "This is the detailed content for FinTech & Digital Business. The digital economy presents unique challenges. We assist clients in navigating Data Localisation laws, regulatory sandboxes, and the specific rules governing Banking & Financial Disputes in the digital space.",
-    },
   ],
 };
+
 export function FinalSection() {
   const finalRef = useRef(null);
   const { scrollYProgress: finalProgress } = useScroll({
@@ -88,16 +88,22 @@ export function FinalSection() {
       {/* "How It All Started" Section */}
       <motion.div
         style={{ opacity: 1 }}
-        className="absolute top-[100vh] w-full overflow-hidden h-screen z-20"
+        className="absolute top-[100vh] w-full overflow-hidden text-center h-screen z-20"
       >
-        <section className=" bg-white flex items-center justify-center w-full h-full">
-          <div className="max-w-7xl flex flex-col gap-10 mx-auto px-4 xs:px-6 sm:px-8 lg:px-8">
+        <section className=" bg-white flex items-center  justify-center w-full h-full">
+          <div className="max-w-7xl flex flex-col gap-10 mx-auto  xs:px-6 sm:px-8 lg:px-8">
             <div className="text-center space-y-4">
-              <h2 className="text-2xl xs:text-3xl sm:text-5xl tracking-tight text-gray-900">
-                How It All Started
+              <h2 className="text-4xl  sm:text-5xl tracking-tight text-gray-900">
+                Reputation Built on Reliability
               </h2>
-              <p className="text-sm xs:text-base sm:text-lg leading-relaxed text-gray-700">
-                This is a space to share more about the business...
+              <p className="text-sm xs:text-base sm:text-lg leading-relaxed px-100 sm:px-78 md:px-58 lg:px-42 text-gray-600">
+                Our reputation for reliability is built on navigating the
+                highest stakes across continents. We successfully advise some of
+                the world&apos;s biggest and most transformative digital
+                platforms, leading enterprises in the global aviation and
+                transport sectors, major players in the food & beverage and
+                packaging industries, and various other key sectors, ensuring
+                their legal strategy matches their ambitious scale.
               </p>
             </div>
 

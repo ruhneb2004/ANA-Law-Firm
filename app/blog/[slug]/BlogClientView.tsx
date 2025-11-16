@@ -97,6 +97,31 @@ export function BlogClientView({ post }: { post: BlogDetail }) {
       <div className="prose lg:prose-xl max-w-none mb-12">
         <p>{post.body}</p>
       </div>
+      {post.link && (
+        <div className="mb-8">
+          <a
+            href={post.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold"
+          >
+            Read more
+            <svg
+              className="ml-2 w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+          </a>
+        </div>
+      )}
 
       <footer className="mt-12 py-6 border-t border-gray-200">
         <div className="flex items-center gap-4">

@@ -84,22 +84,31 @@ export function InsightsSection() {
           <h3
             className={`${playfair.className} text-xl xs:text-2xl sm:text-3xl italic font-medium text-[#8D1A1B] mb-4 xs:mb-5 sm:mb-6`}
           >
-            FSSAI License Requirements
+            The 72-Hour Clock: Key Takeaways and Urgent Compliance Mandates
+            under India’s DPDP Act, 2023
           </h3>
           <p
             className={`${montserrat.className} text-sm xs:text-base sm:text-lg md:text-lg text-gray-900 leading-relaxed xs:leading-7 sm:leading-8 mb-4 xs:mb-5 sm:mb-6`}
           >
-            Telecommunications and entertainment law matters, and his practice
-            encompasses litigation and commercial/transactional advice. He has
-            also advised many multinational banks on Indian data protection law,
-            outsourcing Telecommunications and entertainment law matters, and
-            his practice encompasses litigation and commercial/transactional
-            advice. He has also advised many multinational banks on Indian data
-            protection law, outsourcing Indian data protection . . .
+            India&apso;s new Digital Personal Data Protection (DPDP) Act imposes
+            strict, immediate compliance duties on all data fiduciaries,
+            centering on a crucial 72-hour mandatory notification period for
+            personal data breaches to the Data Protection Board and affected
+            users. The Act demands a complete overhaul of consent frameworks,
+            requiring clear, itemized user notices, and mandates the
+            implementation of &quot;reasonable technical and organizational
+            safeguards&quot; to prevent breaches. Failure to adhere to these new
+            standards of accountability and digital hygiene, including the rules
+            on auto-erasure and processing children&apos;s data, significantly
+            escalates corporate liability, carrying penalties of up to ₹250
+            Crores per breach.
           </p>
-          <button className="text-xs xs:text-sm font-semibold text-gray-900 hover:text-[#8D1A1B] transition-colors self-start">
+          <Link
+            href={"/blog"}
+            className="text-xs xs:text-sm font-semibold text-gray-900 hover:text-[#8D1A1B] transition-colors self-start"
+          >
             read more
-          </button>
+          </Link>
         </motion.div>
 
         {/* Card 2 */}
@@ -115,18 +124,18 @@ export function InsightsSection() {
           <p
             className={`${montserrat.className} text-sm xs:text-base sm:text-lg md:text-lg text-gray-900 leading-relaxed xs:leading-7 sm:leading-8 mb-4 xs:mb-5 sm:mb-6`}
           >
-            Siam Sunset Sparkler telecommunications and entertainment law
-            matters, and his practice encompasses litigation and
-            commercial/transactional advice. He has also advised many
-            multinational banks on Indian data protection law, outsourcing Siam
-            Sunset Sparkler telecommunications and entertainment law matters,
-            and his practice encompasses litigation and commercial/transactional
-            advice. He has also advised many multinational banks on Indian data
-            protection law, outsourcing Siam Sunset . . .
+            India&apos;s updated Extended Producer Responsibility (EPR)
+            framework for plastic packaging has intensified the compliance
+            burden on Producers, Importers, and Brand Owners (PIBOs), shifting
+            focus from simple waste collection to detailed digital traceability
+            and mandatory material requirements.
           </p>
-          <button className="text-xs xs:text-sm font-semibold text-gray-900 hover:text-[#8D1A1B] transition-colors self-start">
+          <Link
+            href={"/blog"}
+            className="text-xs xs:text-sm font-semibold text-gray-900 hover:text-[#8D1A1B] transition-colors self-start"
+          >
             read more
-          </button>
+          </Link>
         </motion.div>
 
         {/* Card 3 */}
@@ -157,9 +166,12 @@ export function InsightsSection() {
                 and international players eyeing India as a potential hub in the
                 global semicon . . .
               </p>
-              <button className="text-xs xs:text-sm font-semibold text-gray-900 hover:text-[#8D1A1B] transition-colors self-start">
+              <Link
+                href={"/blog"}
+                className="text-xs xs:text-sm font-semibold text-gray-900 hover:text-[#8D1A1B] transition-colors self-start"
+              >
                 read more
-              </button>
+              </Link>
             </div>
 
             <div className="hidden md:block relative h-full">

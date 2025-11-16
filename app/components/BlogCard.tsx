@@ -127,7 +127,7 @@ export const BlogCard = ({ blogDetail }: BlogCardProps) => {
               <div className="mb-2 inline-block bg-teal-600 px-3 py-1 text-xs font-semibold">
                 {blogDetail.category}
               </div>
-              <h2 className="text-2xl lg:text-3xl font-extralight">
+              <h2 className="text-2xl lg:text-2xl font-extralight">
                 {blogDetail.title}
               </h2>
             </div>

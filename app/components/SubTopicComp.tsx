@@ -16,7 +16,7 @@ const SubTopicComp = ({
   textColor,
 }: SubTopicCompProps) => {
   return (
-    <Link href={`practiceArea/${id}`} className="cursor-pointer w-full group">
+    <Link href={`practiceArea/${id}`} className="cursor-pointer  group">
       <h3
         className={`text-xl md:text-2xl font-light tracking-wide mb-4 ${textColor}`}
       >
@@ -25,7 +25,7 @@ const SubTopicComp = ({
 
       <div className="overflow-hidden ">
         <div
-          className={`w-full transition-all duration-700 ease-in-out group-hover:h-96 h-96 sm:h-2`}
+          className={`transition-all duration-700 ease-in-out group-hover:h-96 h-96 sm:h-2`}
         >
           <div
             className="w-full h-full bg-cover bg-center relative"
