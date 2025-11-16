@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
+
 import { TopicComp } from "./TopicComp";
 import { PracticeArea } from "../subTopicContent";
 import { MarqueeDemo } from "./TestimonialMarquee";
