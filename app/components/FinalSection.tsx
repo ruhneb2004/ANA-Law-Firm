@@ -65,11 +65,11 @@ export function FinalSection() {
     offset: ["start start", "center start"],
   });
 
-  const blackOpacity = useTransform(finalProgress, [0, 0.5], [1, 0]);
+  const blackOpacity = useTransform(finalProgress, [0, 0.2], [1, 0]);
   const textOpacity = useTransform(finalProgress, [0, 0.5], [1, 0]);
 
   return (
-    <div ref={finalRef} className="relative h-[600vh] w-full z-60">
+    <div ref={finalRef} className="relative h-[500vh] w-full z-60">
       {/* Black Section (Fading Text) */}
       <motion.div
         style={{ opacity: blackOpacity }}
@@ -108,9 +108,8 @@ export function FinalSection() {
         </section>
       </motion.div>
       {/* TopicComp Section */}
-      {/* TopicComp Section */}
-      <div className="absolute top-[200vh] h-[400vh] w-full z-70">
-        <div className="sticky top-0 h-screen w-full bg-gray-100 overflow-hidden">
+      <div className="absolute top-[200vh] h-[300vh] w-full z-70">
+        <div className="sticky top-0 h-screen w-full bg-gray-100">
           <div className="relative h-full" style={{ zIndex: 100 }}>
             <TopicComp
               area={topicCompData}
@@ -120,10 +119,6 @@ export function FinalSection() {
             />
           </div>
         </div>
-      </div>
-
-      {/* GetInTouch overlays on top */}
-      <div className="absolute top-[300vh] w-full z-80">
         <GetInTouch />
       </div>
     </div>

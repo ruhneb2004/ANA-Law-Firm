@@ -18,7 +18,7 @@ export const TopicComp = ({
     className={`sticky top-0 h-screen ${bgColor} ${textColor}`}
   >
     <div className="h-full overflow-y-auto">
-      <div className="w-full px-6 py-16">
+      <div className="w-full px-20 lg:px-6 py-16">
         <div className="mb-16">
           <h2 className="text-4xl md:text-6xl font-light text-center mb-6 tracking-wide">
             {area.title}
