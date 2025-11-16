@@ -91,14 +91,8 @@ export function FinalSection() {
         style={{ opacity: 1 }}
         className="absolute top-[100vh] w-full overflow-hidden h-screen z-20"
       >
-        <section className=" bg-white w-full h-full">
+        <section className=" bg-white flex items-center justify-center w-full h-full">
           <div className="max-w-7xl flex flex-col gap-10 mx-auto px-4 xs:px-6 sm:px-8 lg:px-8">
-            {/*
-        THIS BLOCK IS FIXED:
-        - Removed the 'md:col-span-1' and 'md:col-span-2' divs.
-        - Placed h2 and p directly inside 'text-center'.
-        - Added 'space-y-4' for spacing.
-      */}
             <div className="text-center space-y-4">
               <h2 className="text-2xl xs:text-3xl sm:text-5xl tracking-tight text-gray-900">
                 How It All Started
