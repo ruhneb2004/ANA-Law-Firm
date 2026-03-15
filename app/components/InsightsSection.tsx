@@ -18,25 +18,25 @@ export function InsightsSection() {
   const insightCard1Y = useTransform(
     insightsProgress,
     [0.25, 0.4],
-    ["100%", "0%"]
+    ["100%", "0%"],
   );
 
   const insightCard2Y = useTransform(
     insightsProgress,
     [0.4, 0.55],
-    ["100%", "0%"]
+    ["100%", "0%"],
   );
 
   const insightCard3Y = useTransform(
     insightsProgress,
     [0.55, 0.7],
-    ["100%", "0%"]
+    ["100%", "0%"],
   );
 
   const insightsTitleY = useTransform(
     insightsProgress,
     [0.8, 0.98],
-    ["0vh", "42vh"]
+    ["0vh", "42vh"],
   );
 
   return (
@@ -90,7 +90,7 @@ export function InsightsSection() {
           <p
             className={`${montserrat.className} text-sm xs:text-base sm:text-lg md:text-lg text-gray-900 leading-relaxed xs:leading-7 sm:leading-8 mb-4 xs:mb-5 sm:mb-6`}
           >
-            India&apso;s new Digital Personal Data Protection (DPDP) Act imposes
+            India&apos;s new Digital Personal Data Protection (DPDP) Act imposes
             strict, immediate compliance duties on all data fiduciaries,
             centering on a crucial 72-hour mandatory notification period for
             personal data breaches to the Data Protection Board and affected
@@ -99,9 +99,7 @@ export function InsightsSection() {
             implementation of &quot;reasonable technical and organizational
             safeguards&quot; to prevent breaches. Failure to adhere to these new
             standards of accountability and digital hygiene, including the rules
-            on auto-erasure and processing children&apos;s data, significantly
-            escalates corporate liability, carrying penalties of up to ₹250
-            Crores per breach.
+            on auto-erasure and processing...
           </p>
           <Link
             href={"/blog"}

@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 export function GetInTouch() {
   const insightsRef = useRef(null);
@@ -10,28 +10,34 @@ export function GetInTouch() {
     offset: ["start end", "end start"],
   });
 
+  const smoothInsightsProgress = useSpring(insightsProgress, {
+    stiffness: 24,
+    damping: 28,
+    mass: 0.9,
+  });
+
   const insightCard1Y = useTransform(
-    insightsProgress,
-    [0.25, 0.4, 0.5, 0.55, 0.7],
-    ["100%", "3.75rem", "3.75rem", "0rem", "0%"]
+    smoothInsightsProgress,
+    [0.18, 0.34, 0.46, 0.58, 0.76],
+    ["100%", "3.75rem", "3.75rem", "0rem", "0%"],
   );
 
   const insightCard2Y = useTransform(
-    insightsProgress,
-    [0.4, 0.5, 0.55, 0.7],
-    ["100%", "3.75rem", "0rem", "0%"]
+    smoothInsightsProgress,
+    [0.28, 0.46, 0.58, 0.76],
+    ["100%", "3.75rem", "0rem", "0%"],
   );
 
   const cardHeight = useTransform(
-    insightsProgress,
-    [0.55, 0.7],
-    ["calc(100vh - 3.75rem)", "100vh"]
+    smoothInsightsProgress,
+    [0.58, 0.76],
+    ["calc(100vh - 3.75rem)", "100vh"],
   );
 
   const cardBorderRadius = useTransform(
-    insightsProgress,
-    [0.5, 0.55],
-    ["40px", "0px"]
+    smoothInsightsProgress,
+    [0.46, 0.58],
+    ["40px", "0px"],
   );
 
   return (
