@@ -11,15 +11,15 @@ export function CardsSection() {
   });
 
   const card1X = useTransform(scrollYProgress, [0.05, 0.2], ["200%", "0%"]);
-  const card1Rotate = useTransform(scrollYProgress, [0.05, 0.2], [45, 0]);
+  const card1Rotate = useTransform(scrollYProgress, [0.05, 0.22], [5, 0]);
   const card1Opacity = useTransform(scrollYProgress, [0.05, 0.2], [0, 1]);
 
   const card2X = useTransform(scrollYProgress, [0.2, 0.35], ["200%", "0%"]);
-  const card2Rotate = useTransform(scrollYProgress, [0.2, 0.35], [45, 0]);
+  const card2Rotate = useTransform(scrollYProgress, [0.2, 0.35], [5, 0]);
   const card2Opacity = useTransform(scrollYProgress, [0.2, 0.35], [0, 1]);
 
   const card3X = useTransform(scrollYProgress, [0.35, 0.5], ["200%", "0%"]);
-  const card3Rotate = useTransform(scrollYProgress, [0.35, 0.5], [45, 0]);
+  const card3Rotate = useTransform(scrollYProgress, [0.35, 0.48], [5, 0]);
   const card3Opacity = useTransform(scrollYProgress, [0.35, 0.5], [0, 1]);
 
   return (
@@ -27,7 +27,7 @@ export function CardsSection() {
       ref={containerRef}
       className="relative -mt-32 xs:-mt-36 sm:-mt-44 md:-mt-39 h-[250vh] w-full bg-transparent z-20"
     >
-      <div className="sticky top-0 min-h-screen h-auto flex flex-col items-center justify-center bg-[#1a1a1a] w-[96%] sm:w-[94%] mx-auto overflow-hidden px-3 xs:px-4 sm:px-6 md:px-8 py-12 xs:py-14 sm:py-16 md:py-20 lg:py-24">
+      <div className="sticky top-0 min-h-screen h-auto flex flex-col items-center justify-center bg-[#8D1A1B] w-[96%] sm:w-[94%] mx-auto overflow-hidden px-3 xs:px-4 sm:px-6 md:px-8 py-12 xs:py-14 sm:py-16 md:py-20 lg:py-24">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-4 xs:gap-5 sm:gap-6 md:gap-8 lg:gap-10 w-full max-w-7xl my-auto">
           {/* CARD 1 */}
           <motion.div
