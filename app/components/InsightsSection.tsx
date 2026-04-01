@@ -79,7 +79,7 @@ export function InsightsSection() {
         {/* Card 1 */}
         <motion.div
           style={{ y: insightCard1Y }}
-          className="absolute left-0 md:left-[calc(4/11*100%)] bottom-0 w-full md:w-[calc(7/11*100%/2)] h-screen bg-[#F3EBD3] p-6 xs:p-8 sm:p-10 md:p-12 flex flex-col justify-center overflow-y-auto"
+          className="absolute left-0 md:left-[calc(4/11*100%)] bottom-0 w-full md:w-[calc(7/11*100%/2)] h-screen bg-[#F3EBD3] p-6 xs:p-8 sm:p-10 md:p-12 flex flex-col justify-center overflow-hidden"
         >
           <h3
             className={`${playfair.className} text-xl xs:text-2xl sm:text-3xl italic font-medium text-[#8D1A1B] mb-4 xs:mb-5 sm:mb-6`}
@@ -112,7 +112,7 @@ export function InsightsSection() {
         {/* Card 2 */}
         <motion.div
           style={{ y: insightCard2Y }}
-          className="absolute left-0 md:right-0 md:left-auto bottom-0 w-full md:w-[calc(7/11*100%/2)] h-screen bg-[#E8E0D5] p-6 xs:p-8 sm:p-10 md:p-12 flex flex-col justify-center overflow-y-auto"
+          className="absolute left-0 md:right-0 md:left-auto bottom-0 w-full md:w-[calc(7/11*100%/2)] h-screen bg-[#E8E0D5] p-6 xs:p-8 sm:p-10 md:p-12 flex flex-col justify-center overflow-hidden"
         >
           <h3
             className={`${playfair.className} text-xl xs:text-2xl sm:text-3xl italic font-medium text-[#8D1A1B] mb-4 xs:mb-5 sm:mb-6`}
@@ -142,7 +142,7 @@ export function InsightsSection() {
           className="absolute left-0 md:right-0 md:left-auto bottom-0 w-full md:w-[calc(7/11*100%)] h-screen bg-[#B4ADA3] flex items-center overflow-hidden"
         >
           <div className="w-full h-full grid grid-cols-1 md:grid-cols-2">
-            <div className="p-6 xs:p-8 sm:p-10 md:p-12 flex flex-col justify-center overflow-y-auto">
+            <div className="p-6 xs:p-8 sm:p-10 md:p-12 flex flex-col justify-center overflow-hidden">
               <h3
                 className={`${playfair.className} text-xl xs:text-2xl sm:text-3xl italic font-medium text-[#8D1A1B] mb-4 xs:mb-5 sm:mb-6`}
               >
